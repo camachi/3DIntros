@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Moon+Dance&family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%; 
+ 
+}
+nav
+{  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(26, 26, 26);
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100px;
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid #FFD700;
+}
+nav h1
+{ font-family: "Moon Dance", serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size:  50px;
+  padding: 0;
+  margin: 15px;
+}
+nav ul
+{ 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+nav ul li {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+Footer{
+  background-color: rgb(26, 26, 26);
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid #FFD700;
+}
+
+.Home{
+  position: relative;
+  background-image: url('fotos/BG1.png');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 100%;
+  box-shadow: 
+    inset 0 0 20px rgba(0, 0, 0, 0.4), 
+    inset 0 0 40px rgba(0, 0, 0, 0.6);
+    color: white;
+}
+.Home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.HomeContent{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: auto;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  z-index: 1; 
+}
+.HomeButton{
+  height: 50px;
+  width: 100px;
+  background-color: rgba(255, 30, 0, 0);
+  border: 2px solid #FFD700;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.6s;
+  
+}
+
+.HomeButton:hover{
+  background-color: #FFD700;
+  color: rgb(0, 0, 0);
+-webkit-box-shadow: -1px 2px 63px -6px #FFD700;
+-moz-box-shadow: -1px 2px 63px -6px #FFD700;
+box-shadow: -1px 2px 63px -6px #FFD700;
+}
+.HomeContent h1{
+  font-family: 'Courier New', Courier, monospace;
+}
+.HomeContent p{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.colorP{
+color: #FFD700;
+}
+
+.ShopHome
+{ display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  width: 100%;
+  height: auto; 
+  background-color: rgb(15, 23, 42);
+  background-image: 
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.041) 0%, rgba(15, 23, 42, 1) 50%, rgba(15, 23, 42, 1) 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4), inset 0 0 40px rgba(0, 0, 0, 0.6);
+  color: white;
+  position: relative;
+}
+/*.ShopHome::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  backdrop-filter: blur(8px);
+  
+}
+  */
+.ShopContent {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;  
+  height: auto;
+  text-align: center;
+  z-index: 1;
+  border: px solid rgb(99, 44, 44);
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .ShopContent {
+    flex-direction: column;  
+    width: 90%;  
+    margin: 0 10px;  
+  }
+}
+
+.IntroCard{
+  margin:20px;
+  height: 350px;  
+  max-width: 45%; 
+  border: 2px solid #000000;
+  border-radius: 5px;
+  -webkit-box-shadow: -1px 0px 14px 0px rgba(0,0,0,1);
+  -moz-box-shadow: -1px 0px 14px 0px rgba(0,0,0,1);
+  box-shadow: -1px 0px 14px 0px rgba(0,0,0,1);
+}
+
+.IntroCardImage {
+  width: 100%; 
+  height: 100%; 
+  border-radius: 5px;
+  object-fit: cover;
+  overflow: hidden; 
+}
+.ShopL{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: px solid rgb(255, 255, 255);
+  height: 400px;
+  width: 90%;
+  margin-top: 1px;
+  border-bottom: none;
+  border-top: none;
+}
+
+.CardContent{
+  height: 300px;
+  border-top: 4px solid #FFD700;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  width: 50%;
+  margin:20px;
+  transition: 0.8s ease;
+  font-family: 'Courier New', Courier, monospace;
+}
+.CardContent:hover{
+  background-color: rgb(10, 10, 10);
+}
+
+
