@@ -2,7 +2,8 @@ function Footer()
 {
     return (
         <footer>
-            <p>&copy; 3D Intros</p>
+            <h4>&copy; 3D Intros</h4>
+            <p>This is a practice project in development. Purchases can be made for testing purposes, but no real products or services are sold. The videos used on this site are the property of their respective creators.</p>
         </footer>
     );
 }

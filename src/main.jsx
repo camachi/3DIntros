@@ -7,6 +7,7 @@ import Footer from './Footer.jsx'
 import HomePage from './HomePage.jsx'
 import ShopPage from './ShopPage.jsx';
 import CartPage from './CartPage.jsx';
+import ShopBuyPage from './ShopBuyPage.jsx';
 
 
 createRoot(document.getElementById('root')).render(
@@ -17,6 +18,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/" element={<HomePage />} />
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/ShopPageBuy/:id" element={<ShopBuyPage />} />
       </Routes>
     <Footer></Footer>
     </Router>

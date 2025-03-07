@@ -1,6 +1,6 @@
 import React from "react";
-import imagen from './fotos/BG3.JPG';
-function IntroCard()
+
+function IntroCard({ imagen })
 {
     return (
         
