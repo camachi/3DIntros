@@ -269,6 +269,93 @@ max-width: 100%;
 
 .ShopBuyContent{
  display: flex;
+ justify-content: space-evenly;
+ align-items: center;
  height: 90vh;
  width: 100%;
+ background-color: rgb(15, 23, 42);
+  background-image: 
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.041) 0%, rgba(15, 23, 42, 1) 50%, rgba(15, 23, 42, 1) 100%);
+    color: white;
+}
+
+.ShopBuyLeftContent
+{
+  display: flex;
+  height: 100%;
+  width: 50%;
+  border: px solid red;
+  align-items: center;
+  justify-content: center;
+}
+
+.ShopBuyRightContent
+{
+  display: flex;
+  height: 100%;
+  width: 50%;
+  border: px solid red;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+ 
+}
+
+.VideoCard
+{
+  display: flex;
+  height: 400px;
+  width: 90%;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 3px;
+  -webkit-box-shadow: -1px 0px 14px 0px rgba(0,0,0,1);
+  -moz-box-shadow: -1px 0px 14px 0px rgba(0,0,0,1);
+  box-shadow: -1px 0px 14px 0px rgba(0,0,0,1);
+}
+
+.VideoOptions
+{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: px solid red;
+  height: 100%;
+  width: 20%;
+  overflow: hidden;
+}
+
+.Video{
+  display: flex;
+  height: 100%;
+  width: 90%;
+  border: px solid violet;
+}
+
+.VideoButton
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100%;
+  cursor: pointer;
+  background-color: #FFD700;
+}
+
+.ShopBuyTitulo
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid  #FFD700;
+  width: 90%;
+  height: auto;
+
+}
+
+.ShopBuyTitulo h1
+{
+  margin: 0;
+  margin-top: 91px;
 }
