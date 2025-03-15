@@ -18,7 +18,10 @@ nav
   height: 100px;
   padding: 0;
   margin: 0;
-  border-bottom: 2px solid #FFD700;
+  border-bottom: 2px solid #FF00FF;
+  
+  z-index: 0;
+  position: relative;
 }
 nav h1
 { font-family: "Moon Dance", serif;
@@ -57,7 +60,7 @@ Footer{
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 2px solid #FFD700;
+  border-top: 2px solid #FF00FF;
   margin: 0;
   padding: 0;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -73,6 +76,7 @@ Footer h4{
 .Home{
   position: relative;
   background-image: url('fotos/BG1.png');
+  background-color: #ffffff;
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;
@@ -85,7 +89,14 @@ Footer h4{
     inset 0 0 20px rgba(0, 0, 0, 0.4), 
     inset 0 0 40px rgba(0, 0, 0, 0.6);
     color: white;
+    box-shadow: 0 -5px 50px 5px rgba(161, 51, 255, 0.6);
 }
+
+.logohome{
+  height: 200px;
+  width: 400px;
+}
+
 .Home::before {
   content: '';
   position: absolute;
@@ -94,7 +105,7 @@ Footer h4{
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(16px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -107,13 +118,14 @@ Footer h4{
   text-align: center;
   justify-content: center;
   align-content: center;
+  align-items: center;
   z-index: 1; 
 }
 .HomeButton{
   height: 50px;
-  width: 100px;
+  width: 150px;
   background-color: rgba(255, 30, 0, 0);
-  border: 2px solid #FFD700;
+  border: 2px solid #00AAFF;
   border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -125,22 +137,22 @@ Footer h4{
 }
 
 .HomeButton:hover{
-  background-color: #FFD700;
+  background-color: #00AAFF;
   color: rgb(0, 0, 0);
--webkit-box-shadow: -1px 2px 63px -6px #FFD700;
--moz-box-shadow: -1px 2px 63px -6px #FFD700;
-box-shadow: -1px 2px 63px -6px #FFD700;
+-webkit-box-shadow: -1px 2px 63px -6px #00AAFF;
+-moz-box-shadow: -1px 2px 63px -6px #00AAFF;
+box-shadow: -1px 2px 63px -6px #00AAFF;
 }
 .HomeContent h1{
   font-family: 'Courier New', Courier, monospace;
 }
 .HomeContent p{
-  font-family: 'Courier New', Courier, monospace;
+  font-family:'Courier New', Courier, monospace;
   font-weight: bold;
 }
 
 .colorP{
-color: #FFD700;
+color: #FF00FF;
 }
 
 .ShopHome
@@ -150,15 +162,16 @@ color: #FFD700;
   justify-content: center; 
   width: 100%;
   height: auto; 
-  background-color: rgb(15, 23, 42);
-  background-image: 
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.041) 0%, rgba(15, 23, 42, 1) 50%, rgba(15, 23, 42, 1) 100%);
+  background-color: #141414;
+  
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4), inset 0 0 40px rgba(0, 0, 0, 0.6);
   color: white;
   position: relative;
+  box-shadow: 0 -5px 50px 5px rgba(161, 51, 255, 0.6);
+  
 }
 /*.ShopHome::before {
   content: '';
@@ -225,7 +238,7 @@ color: #FFD700;
 
 .CardContent{
   height: 350px;
-  border-top: 4px solid #FFD700;
+  border-top: 4px solid #FF00FF;
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   border-radius: 5px;
@@ -236,7 +249,10 @@ color: #FFD700;
   overflow: hidden;
 }
 .CardContent:hover{
-  background-color: rgb(10, 10, 10);
+  
+  -webkit-box-shadow: -1px 2px 63px -6px #00AAFF;
+-moz-box-shadow: -1px 2px 63px -6px #00AAFF;
+box-shadow: -1px 2px 63px -6px #00AAFF;
 }
 
 .CardDiv{
@@ -273,9 +289,9 @@ max-width: 100%;
  align-items: flex-start;
  height: auto;
  width: 100%;
- background-color: rgb(15, 23, 42);
-  background-image: 
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.041) 0%, rgba(15, 23, 42, 1) 50%, rgba(15, 23, 42, 1) 100%);
+ background-color: #141414;
+ position: relative;
+  box-shadow: 0 -5px 50px 5px rgba(161, 51, 255, 0.6);
     color: white;
 }
 
@@ -342,7 +358,7 @@ max-width: 100%;
   height: 100px;
   width: 100%;
   cursor: pointer;
-  background-color: #FFD700;
+  background-color: #FF00FF;
 }
 
 .ShopBuyTitulo
@@ -350,7 +366,7 @@ max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px solid  #FFD700;
+  border-bottom: 2px solid  #FF00FF;
   width: 90%;
   height: auto;
   font-family: 'Courier New', Courier, monospace;
@@ -397,11 +413,11 @@ max-width: 100%;
 { display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #000000;
+  border: 1px solid #0faefd;
   border-radius: 10px;
   color: rgb(0, 0, 0);
   font-weight: bold;
-  background: #FFD700;
+  background: #4cb3e7;
   font-size: medium;
   height: 70px;
   width: 50%;
@@ -411,7 +427,10 @@ max-width: 100%;
 }
 .ShopBuyButtons:hover
 {
-  background-color: #fcec95;
+  background-color: #00AAFF;
+  -webkit-box-shadow: -1px 2px 63px -6px #00AAFF;
+-moz-box-shadow: -1px 2px 63px -6px #00AAFF;
+box-shadow: -1px 2px 63px -6px #00AAFF
   
 }
 
@@ -493,7 +512,7 @@ label{
 }
 .desIntroOptions h4
 {
-  border-bottom: 2px solid #FFD700 ;
+  border-bottom: 2px solid #FF00FF ;
 }
 .desIntroOptions li
 {
@@ -516,10 +535,11 @@ li::marker
   border: 1px solid red;
   width: 100%;
   height: auto;
+  
 }
 .ShopBuyDetailsContainer h4
 {
-  border-bottom: 2px solid #FFD700;
+  border-bottom: 2px solid #FF00FF;
 }
 
 .ShopBuyDetailsContainer li
@@ -538,7 +558,7 @@ li::marker
 }
 
 .descriptiontitle h4{
- border-bottom: 2px solid #FFD700;
+ border-bottom: 2px solid #FF00FF;
  }
 
  .descriptionbuttoncontainer
@@ -549,3 +569,60 @@ li::marker
   justify-content: space-evenly;
   align-items: center;
  }
+
+ .emailbutton
+ {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 200px;
+  text-align: center;
+  border: 1px solid #00aeff;
+  background-color: #4cb3e7;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  font-size: 15px;
+ }
+
+ .emailbutton img
+ {
+    display: flex;
+    margin-left: 20px;
+    height: 25px;
+    width: auto;
+ }
+
+ .discordbutton
+ {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 200px;
+  text-align: center;
+  border: 1px solid #00aeff;
+  background-color: #4cb3e7;
+  
+  
+  border-radius: 4px;
+  margin-bottom: 40px;
+  
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  font-size: 15px;
+ }
+
+ .discordbutton img
+ {
+    display: flex;
+    margin-left: 10px;
+    height: 25px;
+    width: auto;
+ }
+
+ 

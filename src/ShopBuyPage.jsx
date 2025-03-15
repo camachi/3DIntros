@@ -2,6 +2,10 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import VideoCard from "./VideoCard";
 import ResolutionOptions from "./ResolutionOptions";
+import IntroOptions from "./IntroOptions";
+import ShopDetails from "./ShopDetails";
+import emailIcon from "./fotos/email.png";
+import discordIcon from "./fotos/discord.png";
 function ShopBuyPage()
 {   const { id } = useParams();
     const products = [
@@ -33,29 +37,18 @@ function ShopBuyPage()
             </div>
             <div className="ShopBuyDescription">
 
-            <div className="desIntroOptions">
-            <h4>By purchasing a {product.titulo}, you can customize:</h4>
-            <ul>
-            {product.features.map((feature, index) => (
-            <li key={index}>{feature}</li>
-                ))}
-            </ul>
-            </div>
-            <div className="ShopBuyDetailsContainer">
-                <h4>What you should keep in mind before purchasing:</h4>
-                <ul>
-                {product.details.map((feature, index) => (
-            <li key={index}>{feature}</li>
-                ))}
-                </ul>
-            </div>
+            <IntroOptions titulo={product.titulo} list = {product.features}></IntroOptions>
+
+
+            <ShopDetails list ={product.details}></ShopDetails>
+
                 <div className="descriptiontitle">
                 <h4>{product.descripcion}</h4>
                 </div>
 
                 <div className="descriptionbuttoncontainer">
-                <button className="emailbutton">Email</button>  
-                <button className="discordbutton">Discord</button>
+                <button className="emailbutton">Email <img src={emailIcon} alt="email icon"></img></button>  
+                <button className="discordbutton">Discord<img src={discordIcon} alt="email icon"></img></button>
                 </div>
 
             </div>
