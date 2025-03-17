@@ -52,6 +52,7 @@ nav ul li a {
 
 Footer{
   display: flex;
+  height: auto;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -65,6 +66,7 @@ Footer{
   padding: 0;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 15px;
+  text-align: center;
 }
 Footer p{
   margin: 5px;
@@ -190,7 +192,7 @@ color: #FF00FF;
   flex-direction: column; 
   align-items: center;
   justify-content: space-between;
-  width: 95%;  
+  width: 100%;  
   height: auto;
   text-align: center;
   z-index: 1;
@@ -198,18 +200,15 @@ color: #FF00FF;
   overflow: hidden;
 }
 
-@media (max-width: 768px) {
-  .ShopContent {
-    flex-direction: column;  
-    width: 90%;  
-    margin: 0 10px;  
-  }
-}
+
 
 .IntroCard{
+  display: flex;
+  align-items: stretch;
   margin:20px;
-  height: 350px;  
-  max-width: 45%; 
+  height: auto;  
+  
+  width: 50%; 
   border: 2px solid #000000;
   border-radius: 5px;
   -webkit-box-shadow: -1px 0px 14px 0px rgba(0,0,0,1);
@@ -218,8 +217,8 @@ color: #FF00FF;
 }
 
 .IntroCardImage {
-  width: 100%; 
-  height: 100%; 
+  flex: 1;
+  aspect-ratio: 16 /9;
   border-radius: 5px;
   object-fit: cover;
   overflow: hidden; 
@@ -229,23 +228,27 @@ color: #FF00FF;
   align-items: center;
   justify-content: space-between;
   border: px solid rgb(255, 255, 255);
-  height: 400px;
+  height: auto;
   width: 90%;
   margin-top: 1px;
   border-bottom: none;
   border-top: none;
+ 
 }
 
 .CardContent{
-  height: 350px;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  max-height: 440px;
   border-top: 4px solid #FF00FF;
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   border-radius: 5px;
-  width: 50%;
+  width: 40%;
   margin:15px;
   transition: 0.8s ease;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   overflow: hidden;
 }
 .CardContent:hover{
@@ -304,13 +307,14 @@ max-width: 100%;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+  flex-direction: column;
   
 }
 
 .ShopBuyRightContent
 {
   display: flex;
-  height: 100%;
+  height: auto;
   width: 50%;
   border: px solid rgb(0, 153, 255);
   justify-content: center;
@@ -353,12 +357,17 @@ max-width: 100%;
 .VideoButton
 {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: left;
   height: 100px;
   width: 100%;
   cursor: pointer;
-  background-color: #FF00FF;
+  background-color: #1f96ac;
+  font-size: 10px;
+  color: #64b8f0;
+  font-size: medium;
+  font-weight: bold;
+  
 }
 
 .ShopBuyTitulo
@@ -384,7 +393,7 @@ max-width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  height: 160px;
+  height: auto;
   width: 100%;
   border: px solid rgb(253, 0, 0);
   margin-top: 20px;
@@ -399,40 +408,7 @@ max-width: 100%;
   align-items: center;
 }
 
-.ShopBuyButtonsContainer
-{
-  border: px solid rgb(253, 0, 0);
-  display: flex;
-  height: auto;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.ShopBuyButtons
-{ display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #0faefd;
-  border-radius: 10px;
-  color: rgb(0, 0, 0);
-  font-weight: bold;
-  background: #4cb3e7;
-  font-size: medium;
-  height: 70px;
-  width: 50%;
-  margin: 10px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-.ShopBuyButtons:hover
-{
-  background-color: #00AAFF;
-  -webkit-box-shadow: -1px 2px 63px -6px #00AAFF;
--moz-box-shadow: -1px 2px 63px -6px #00AAFF;
-box-shadow: -1px 2px 63px -6px #00AAFF
-  
-}
+
 
 .bulletcontainer
 { display: flex;
@@ -446,26 +422,23 @@ box-shadow: -1px 2px 63px -6px #00AAFF
 }
 
 .bulletinfocontainer
-{
-  height: 100%;
+{ display: flex;
+  height: auto;
   justify-content: space-between;
   align-items: center;
-  display: flex;
   border: px solid rgb(47, 0, 255);
   flex-direction: column;
   font-family: 'Courier New', Courier, monospace;
   
 }
 
-.radio_button
-{
 
-}
 
 
 .bulletinfocontainertitle
 {
   display: flex;
+  height: auto;
   border: px solid red;
   justify-content: flex-start;
   width: 100%;
@@ -473,7 +446,7 @@ box-shadow: -1px 2px 63px -6px #00AAFF
 .bulletinfocontainer h4
 {
   margin: 10px; 
-  margin-top: 0;
+  
 }
 .bulletinfocontainer p
 {
@@ -532,7 +505,7 @@ li::marker
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 1px solid red;
+  border: px solid red;
   width: 100%;
   height: auto;
   
@@ -551,7 +524,7 @@ li::marker
 
 .descriptiontitle{
  height: auto;
- width: 100%;
+ width: 95%;
  display: flex;
  justify-content: center;
  align-content: center;
@@ -625,4 +598,190 @@ li::marker
     width: auto;
  }
 
+ .creditscontainer
+ {
+  display: flex;
+  border: px solid red;
+  height: 100px;
+  width: 90%;
+  margin: 10px;
+ }
+
+ .ShopBuyButtonsContainer
+{
+  border: px solid rgb(253, 0, 0);
+  display: flex;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.ShopBuyButtons
+{ display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #0faefd;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  background: #4cb3e7;
+  font-size: medium;
+  height: 70px;
+  width: 50%;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.ShopBuyButtons:hover
+{
+  background-color: #00AAFF;
+  -webkit-box-shadow: -1px 2px 63px -6px #00AAFF;
+-moz-box-shadow: -1px 2px 63px -6px #00AAFF;
+box-shadow: -1px 2px 63px -6px #00AAFF
+  
+}
+
+
+ @media (max-width: 1050px) {
+  .ShopL {
+    flex-direction: column;
+    width: 100%;
+  }
+  .IntroCard
+  {
+    width: 90%;
+    height: auto;
+   
+  }
+  .IntroCardImage
+  {
+    height: auto;
+    
+  }
+
+  .CardContent
+  {
+    width: 90%;
+  }
+
+
+}
+
+
+
+@media (max-width: 1300px)
+{
+  .ShopBuyContent
+  { 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .ShopBuyLeftContent
+  {
+    width: 80%;
+    
+  }
+  .ShopBuyRightContent
+  {
+    width: 98%;
+  }
+
  
+  
+  .descriptionbuttoncontainer
+  {
+    flex-direction: column;
+  }
+ 
+  .ShopBuyDetailsContainer
+  {
+    width: 99%;
+    
+  }
+  .Video
+  {
+   width: 100%;
+   
+  }
+  .VideoOptions
+  {
+    flex-direction: row;
+    width: 100%;
+    height: 120px;
+    border-bottom: 1px solid white;
+  }
+  .VideoCard
+  {
+    width: 98%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+  }
+  .ShopBuyLeftContent
+  {
+    width: 80%;
+  }
+}
+
+@media (max-width: 800px)
+{
+  .ShopBuyLeftContent
+  {
+    width: 100%;
+  }
+
+  .ShopBuyTitulo
+  {
+    width: 98%;
+  }
+
+  .ShopBuyRightContent h4
+  {
+    text-align: center;
+    
+    
+  }
+}
+
+@media (max-width: 500px)
+{
+  .IntroCard
+  {
+    width: 95%;
+  }
+
+  .HomeContent p
+  {
+    font-size: 12px;
+    
+  }
+  .HomeButton
+  {
+    margin-top: 10px;
+  }
+  .logohome
+  {
+    height: 150px;
+    width: 300px;
+  }
+  .VideoCard
+  {
+    height: 300px;
+  }
+  .VideoOptions
+  {height: 50px;
+  }
+  .VideoButton
+  {
+    height: 50px;
+  }
+  .ShopBuyButtons
+  {
+    width: 85%;
+  }
+  
+  
+}

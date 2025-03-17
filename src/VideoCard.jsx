@@ -1,13 +1,15 @@
-function VideoCard({video1})
-{
+import { useState } from "react";
+
+function VideoCard({list = [], images =[]})
+{   const [video1,setVideos] = useState(list[0]);
     return(
         <div className="VideoCard">
 
                     <div className="VideoOptions">
-                        <button className="VideoButton">tEST</button>
-                        <button className="VideoButton">tEST</button>
-                        <button className="VideoButton">tEST</button>
-                        <button className="VideoButton">tEST</button>
+                        {list.map((url,index)=>(
+                            <button key={index} onClick={()=>setVideos(url)} className="VideoButton" style={{ backgroundImage: `url(${images[index]})`, backgroundSize: "cover", backgroundPosition: "center"}}>{index+1}</button>
+                        ))}
+                        
                         
                     </div>
 
