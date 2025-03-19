@@ -37,10 +37,12 @@ nav ul
   padding: 0;
   margin: 0;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 nav ul li {
-  font-family: 'Courier New', Courier, monospace;
-  margin: 0 15px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0 22px;
 }
 
 nav ul li a {
@@ -49,6 +51,12 @@ nav ul li a {
   font-size: 18px;
   transition: color 0.3s ease;
 }
+.cartLogo
+{
+  height: 30px;
+  vertical-align: middle;
+}
+
 
 Footer{
   display: flex;
@@ -124,6 +132,9 @@ Footer h4{
   z-index: 1; 
 }
 .HomeButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 50px;
   width: 150px;
   background-color: rgba(255, 30, 0, 0);
@@ -132,6 +143,8 @@ Footer h4{
   margin-left: auto;
   margin-right: auto;
   color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: bold;
   cursor: pointer;
   transition: 0.6s;
@@ -641,6 +654,7 @@ li::marker
 box-shadow: -1px 2px 63px -6px #00AAFF
   
 }
+
 
 
  @media (max-width: 1050px) {
