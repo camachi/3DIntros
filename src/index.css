@@ -263,6 +263,7 @@ color: #FF00FF;
   transition: 0.8s ease;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   overflow: hidden;
+  
 }
 .CardContent:hover{
   
@@ -280,10 +281,12 @@ box-shadow: -1px 2px 63px -6px #00AAFF;
   height: 38%;
   margin: 0; 
   
+  
 }
 .CardDiv p{
 margin: 0;
-padding: 0 10px; 
+padding-left: 20px;
+padding-right: 20px;
 text-align: left;
 word-wrap: break-word;
 overflow-wrap: break-word; 
@@ -655,7 +658,57 @@ box-shadow: -1px 2px 63px -6px #00AAFF
   
 }
 
+.InCartItemContainer
+{
+  display: flex;
+  height: auto;
+  width: 100%;
+  border: 1px solid red;
+}
 
+.CartDivContainer
+{
+  display: flex;
+  height: 90vh;
+  width: 100%;
+  background-color: rgb(26, 26, 26);
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 -5px 50px 5px rgba(161, 51, 255, 0.6);
+  color: white;
+}
+
+.ItemContainer
+{
+  display: flex;
+  justify-content: center;
+  height: auto;
+  align-items: center;
+  width: 100%;
+  border: px solid white;
+  flex-direction: column;
+
+}
+
+.ItemTitleContainer
+{
+  display: flex;
+  height: auto;
+  width: 70%;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  justify-content: center;
+  align-content: center;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.ItemTitleContainer h1
+{
+  margin: 0;
+  padding-top: 20px;
+}
 
  @media (max-width: 1050px) {
   .ShopL {
