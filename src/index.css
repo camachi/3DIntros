@@ -669,7 +669,7 @@ box-shadow: -1px 2px 63px -6px #00AAFF
 .CartDivContainer
 {
   display: flex;
-  height: 90vh;
+  min-height: 90vh; 
   width: 100%;
   background-color: rgb(26, 26, 26);
   justify-content: flex-start;
@@ -708,6 +708,75 @@ box-shadow: -1px 2px 63px -6px #00AAFF
 {
   margin: 0;
   padding-top: 20px;
+}
+
+.ItemDivCartContainer
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+  width: 97%;
+  border: 2px solid rgb(255, 255, 255);
+  margin: 5px;
+}
+.ItemCartContainer
+{
+  display: flex;
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ItemButtonDiv
+{
+  display: flex;
+  padding: 10px;
+  border: 1px solid red;
+}
+.ItemTituloDiv
+{
+  display: flex;
+  height: auto;
+  width: auto;
+  padding: 10px;
+  border: 1px solid red;
+  justify-content: center;
+  align-items: center;
+}
+.ItemDescriptionDiv
+{
+  display: flex;
+  height: auto;
+  width: 30%;
+  border: 1px solid blue;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ItemImageDiv
+{
+  display: flex;
+  height: 200px;
+  width: 30%;
+  border: 1px solid red;
+}
+.ItemImage
+{
+  width: 100%;  
+  height: 100%;  
+  object-fit: cover;  
+  object-position: center;  
+}
+.ItemIdDiv
+{
+  display: flex;
+  height: auto;
+  width: auto;
+  border: 1px solid yellow;
 }
 
  @media (max-width: 1050px) {

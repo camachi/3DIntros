@@ -1,12 +1,17 @@
-function ResolutionOptions( {price4k, price2k})
-{
+import { useState } from "react";
+import { CartContext } from "./CartContext";
+import React, { useContext } from 'react';
+function ResolutionOptions( {price4k, price2k, titulo})
+{   const { addToCart } = useContext(CartContext);
+    const [selectedPrice, setSelectedPrice] = useState(price2k);  
     return(
+        <>
         <div className="ShopBuyResOptions">
                 
 
                 <div className="bulletinfocontainer">
             <div className="bulletinfocontainertitle">
-            <input className="radio_button" type="radio" name="option"  value="Opción 1"/>
+            <input className="radio_button" type="radio" name="resolution" value={price2k} checked={selectedPrice === price2k} onChange={() => setSelectedPrice(price2k)} />
             <h4>2k & 60fps - <span className="colorP">{price2k}</span></h4>
             </div>
          
@@ -14,7 +19,7 @@ function ResolutionOptions( {price4k, price2k})
             
 
             <div className="bulletinfocontainertitle">
-            <input className="radio_button" type="radio" name="option"  value="Opción 1"/>
+            <input className="radio_button" type="radio" name="resolution"  value={price4k}  checked={selectedPrice === price4k}  onChange={() => setSelectedPrice(price4k)}   />
             <h4>4k & 60fps - <span className="colorP">{price4k}</span></h4>
             </div>
          
@@ -24,6 +29,12 @@ function ResolutionOptions( {price4k, price2k})
            
                 </div>
             </div>
+
+            <div className="ShopBuyButtonsContainer">
+            <button onClick={() => addToCart({ titulo, price: selectedPrice })}  className="ShopBuyButtons" >Add to Cart</button>
+            <button className="ShopBuyButtons">Buy Now</button>
+            </div>
+            </>
     );
 }
 

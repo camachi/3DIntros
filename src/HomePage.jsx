@@ -1,8 +1,10 @@
 import logo from "./fotos/intrologo.png";
 import { Link } from "react-router-dom";
+import { CartProvider } from './CartContext';
 function HomePage()
 {
     return(
+        
         <div className="Home">
             <div className="HomeContent">
             
@@ -12,6 +14,7 @@ function HomePage()
             
             </div>
         </div>
+        
     );
 }
 

@@ -8,9 +8,11 @@ import HomePage from './HomePage.jsx'
 import ShopPage from './ShopPage.jsx';
 import CartPage from './CartPage.jsx';
 import ShopBuyPage from './ShopBuyPage.jsx';
+import { CartProvider } from './CartContext';
 
 
 createRoot(document.getElementById('root')).render(
+  <CartProvider>
   <StrictMode>
     <Router>
     <Navbar></Navbar>
@@ -22,5 +24,6 @@ createRoot(document.getElementById('root')).render(
       </Routes>
     <Footer></Footer>
     </Router>
-  </StrictMode>,
+  </StrictMode>
+  </CartProvider>
 )

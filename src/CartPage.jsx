@@ -1,5 +1,13 @@
-function CartPage({list})
-{   if (!list || list.length === 0) {
+import React from "react";
+import { CartContext } from "./CartContext";
+import { useContext } from "react";
+import InCartItem from "./InCartItem";
+
+function CartPage()
+{       const { cart } = useContext(CartContext);
+   
+    
+    if (cart.length === 0) {
     return (
         <div className="CartDivContainer">
 
@@ -28,8 +36,24 @@ function CartPage({list})
                     Your Cart
                     </h1>
 
+                  
+                        
+                    
+
                 </div>
+
+                <div className="ItemCartContainer">
+                {cart.map((item, index) => (
+                        
+                         <InCartItem key={index} titulo={item.titulo} precio={item.price}> </InCartItem>
+                        ))}
+                </div>
+
+                <button>Check Out</button>
         </div>
+
+
+      
     );
 }
 
