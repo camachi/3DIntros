@@ -3,7 +3,7 @@ import { CartContext } from "./CartContext";
 import React, { useContext } from 'react';
 function ResolutionOptions( {price4k, price2k, titulo})
 {   const { addToCart } = useContext(CartContext);
-    const [selectedPrice, setSelectedPrice] = useState(price2k);  
+    const [selectedPrice, setSelectedPrice] = useState({ resolution: "2k [2560x1440p] & 60fps", price: price2k });  
     return(
         <>
         <div className="ShopBuyResOptions">
@@ -11,7 +11,7 @@ function ResolutionOptions( {price4k, price2k, titulo})
 
                 <div className="bulletinfocontainer">
             <div className="bulletinfocontainertitle">
-            <input className="radio_button" type="radio" name="resolution" value={price2k} checked={selectedPrice === price2k} onChange={() => setSelectedPrice(price2k)} />
+            <input className="radio_button" type="radio" name="resolution" value={price2k} checked={selectedPrice.price === price2k} onChange={() => setSelectedPrice({price: price2k, resolution: "2k & 60fps"})} />
             <h4>2k & 60fps - <span className="colorP">{price2k}</span></h4>
             </div>
          
@@ -19,7 +19,7 @@ function ResolutionOptions( {price4k, price2k, titulo})
             
 
             <div className="bulletinfocontainertitle">
-            <input className="radio_button" type="radio" name="resolution"  value={price4k}  checked={selectedPrice === price4k}  onChange={() => setSelectedPrice(price4k)}   />
+            <input className="radio_button" type="radio" name="resolution"  value={price4k}  checked={selectedPrice.price === price4k}  onChange={() => setSelectedPrice({price: price4k, resolution: "4k & 60fps"})}   />
             <h4>4k & 60fps - <span className="colorP">{price4k}</span></h4>
             </div>
          
@@ -31,7 +31,7 @@ function ResolutionOptions( {price4k, price2k, titulo})
             </div>
 
             <div className="ShopBuyButtonsContainer">
-            <button onClick={() => addToCart({ titulo, price: selectedPrice })}  className="ShopBuyButtons" >Add to Cart</button>
+            <button onClick={() => addToCart({ titulo, price: selectedPrice.price, resolution: selectedPrice.resolution })}  className="ShopBuyButtons" >Add to Cart</button>
             <button className="ShopBuyButtons">Buy Now</button>
             </div>
             </>

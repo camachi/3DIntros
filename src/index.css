@@ -717,8 +717,11 @@ box-shadow: -1px 2px 63px -6px #00AAFF
   align-items: center;
   height: auto;
   width: 97%;
-  border: 2px solid rgb(255, 255, 255);
+  border: 1px dashed rgb(255, 255, 255);
+  
+  padding: 10px;
   margin: 5px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .ItemCartContainer
 {
@@ -728,13 +731,14 @@ box-shadow: -1px 2px 63px -6px #00AAFF
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: px solid rebeccapurple;
 }
 
 .ItemButtonDiv
 {
   display: flex;
   padding: 10px;
-  border: 1px solid red;
+  border: px solid red;
 }
 .ItemTituloDiv
 {
@@ -742,32 +746,49 @@ box-shadow: -1px 2px 63px -6px #00AAFF
   height: auto;
   width: auto;
   padding: 10px;
-  border: 1px solid red;
+  border: px solid red;
   justify-content: center;
   align-items: center;
+}
+
+.ItemTituloDiv h3{
+  border-bottom: 2px solid #FF00FF;
 }
 .ItemDescriptionDiv
 {
   display: flex;
+  flex-direction: column;
   height: auto;
-  width: 30%;
-  border: 1px solid blue;
+  width: 90%;
+  border: px solid blue;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: left;
+  text-align: left;
+  
 }
+.ItemDescriptionDiv p
+{ margin: 0;
+  font-size: 15px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 
 .ItemImageDiv
 {
   display: flex;
   height: 200px;
-  width: 30%;
-  border: 1px solid red;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid rgb(255, 255, 255);
 }
 .ItemImage
-{
+{ 
   width: 100%;  
   height: 100%;  
+  margin: 0;
+  padding: 0;
   object-fit: cover;  
   object-position: center;  
 }
@@ -776,8 +797,87 @@ box-shadow: -1px 2px 63px -6px #00AAFF
   display: flex;
   height: auto;
   width: auto;
-  border: 1px solid yellow;
+  border: px solid yellow;
 }
+
+.ItemInfoDiv
+{
+  display: flex;
+  flex-direction: column;
+  border: px solid green;
+  justify-content: center;
+  align-items: center;
+  min-width: 20%;
+}
+.ItemRemoveButton
+{ display: flex;
+  justify-content:center;
+  align-items: self-end;
+  height: 30px;
+  width: 100px;
+  border: none;
+  border-bottom: 2px solid rgb(247, 244, 244);
+  
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  color: white;
+  transition: 0.5s ease;
+}
+.ItemRemoveButton:hover{
+  background-color: #222222;
+}
+.chekoutbutton
+{ display: flex;
+  justify-content: center;
+  color: rgb(255, 255, 255) ;
+  font-weight: bolder;
+  align-items: center;
+  font-size: medium;
+  height: 50px;
+  width: 250px;
+  border: none;
+  border-radius: 10px;
+  background-color: #008060;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+.chekoutbutton:hover{
+  background-color: #01946f;
+}
+.checkoutbuttondiv
+{
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  border: px solid red;
+  margin-bottom: 10px;
+}
+.TotalPriceDiv
+{ 
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  height: 100px;
+  width: 99%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.ItemImageContainer
+{
+  border: 1px solid red;
+  display: flex;
+  height: 100%;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
 
  @media (max-width: 1050px) {
   .ShopL {
@@ -823,7 +923,11 @@ box-shadow: -1px 2px 63px -6px #00AAFF
   {
     width: 98%;
   }
-
+  .ItemDescriptionDiv
+  {
+    width: 100%;
+  }
+  
  
   
   .descriptionbuttoncontainer
@@ -863,7 +967,15 @@ box-shadow: -1px 2px 63px -6px #00AAFF
 }
 
 @media (max-width: 800px)
-{
+{   
+  .ItemDivCartContainer
+  {
+    flex-direction: column;
+  }
+  .ItemDescriptionDiv
+  {
+    width: 100%;
+  }
   .ShopBuyLeftContent
   {
     width: 100%;

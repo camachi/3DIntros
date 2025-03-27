@@ -1,9 +1,9 @@
 import multy from "./fotos/BG3.jpg";
 import basic from "./fotos/BG1.png";
 import mystery from "./fotos/BG2.png";
-function InCartItem({titulo, precio})
+function InCartItem({titulo, precio, resolution})
 {   let imagen;
-
+    
     if(titulo.toLowerCase() === "multystyle intro")
     {
         imagen = multy;
@@ -22,21 +22,29 @@ function InCartItem({titulo, precio})
     return(
         <div className="ItemDivCartContainer">
             
-
+            
             <div className="ItemImageDiv">
-            <img src={imagen} alt={titulo} className="ItemImage" />
+            <img src={imagen} alt={titulo} className="ItemImage"/>
             </div>
+            
 
+            <div className="ItemInfoDiv">
+            
             <div className="ItemTituloDiv"> 
             <h3>{titulo}</h3>
             </div>
-
+            
             <div className="ItemDescriptionDiv">
-            <h3>{precio}</h3>
+            <p>{resolution}</p>
+            <h4>{precio},00 $</h4>
             </div>
+
+            </div>
+
+            
             
             <div className="ItemButtonDiv"> 
-                <button>Remove</button>
+                <button className="ItemRemoveButton">Remove</button>
             </div>
         </div>
     );
