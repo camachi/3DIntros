@@ -53,14 +53,9 @@ function ShopBuyPage()
 
             <ShopDetails list ={product.details}></ShopDetails>
 
-                <div className="descriptiontitle">
-                <h4>{product.descripcion}</h4>
-                </div>
+               
 
-                <div className="descriptionbuttoncontainer">
-                <button className="emailbutton">Email <img src={emailIcon} alt="email icon"></img></button>  
-                <button className="discordbutton">Discord<img src={discordIcon} alt="email icon"></img></button>
-                </div>
+                
 
             </div>
 

@@ -1,8 +1,11 @@
+import React, { useContext } from "react";
+import { CartContext } from "./CartContext"; 
 import multy from "./fotos/BG3.jpg";
 import basic from "./fotos/BG1.png";
 import mystery from "./fotos/BG2.png";
-function InCartItem({titulo, precio, resolution})
+function InCartItem({titulo, precio, resolution,id})
 {   let imagen;
+    const { removeFromCart } = useContext(CartContext);
     
     if(titulo.toLowerCase() === "multystyle intro")
     {
@@ -36,7 +39,7 @@ function InCartItem({titulo, precio, resolution})
             
             <div className="ItemDescriptionDiv">
             <p>{resolution}</p>
-            <h4>{precio},00 $</h4>
+            <h4>${precio},00</h4>
             </div>
 
             </div>
@@ -44,7 +47,7 @@ function InCartItem({titulo, precio, resolution})
             
             
             <div className="ItemButtonDiv"> 
-                <button className="ItemRemoveButton">Remove</button>
+                <button onClick={() => removeFromCart(id)} className="ItemRemoveButton">Remove</button>
             </div>
         </div>
     );

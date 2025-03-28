@@ -394,7 +394,7 @@ max-width: 100%;
   border-bottom: 2px solid  #FF00FF;
   width: 90%;
   height: auto;
-  font-family: 'Courier New', Courier, monospace;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
 
@@ -444,7 +444,7 @@ max-width: 100%;
   align-items: center;
   border: px solid rgb(47, 0, 255);
   flex-direction: column;
-  font-family: 'Courier New', Courier, monospace;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   
 }
 
@@ -493,7 +493,7 @@ label{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  font-family: 'Courier New', Courier, monospace;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   
   border: px solid red;
   height: auto;
@@ -502,6 +502,8 @@ label{
 .desIntroOptions h4
 {
   border-bottom: 2px solid #FF00FF ;
+  font-size: large;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .desIntroOptions li
 {
@@ -516,7 +518,7 @@ li::marker
 }
 
 .ShopBuyDetailsContainer
-{ font-family: 'Courier New', Courier, monospace;
+{ font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -529,6 +531,8 @@ li::marker
 .ShopBuyDetailsContainer h4
 {
   border-bottom: 2px solid #FF00FF;
+  font-size: large;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .ShopBuyDetailsContainer li
@@ -804,10 +808,10 @@ box-shadow: -1px 2px 63px -6px #00AAFF
 {
   display: flex;
   flex-direction: column;
-  border: px solid green;
+  border:px solid green;
   justify-content: center;
   align-items: center;
-  min-width: 20%;
+  min-width: 160px;
 }
 .ItemRemoveButton
 { display: flex;
@@ -876,6 +880,32 @@ box-shadow: -1px 2px 63px -6px #00AAFF
   width: 50%;
   justify-content: center;
   align-items: center;
+}
+
+/* Alerta css */
+
+.Alert{
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  opacity: 0;
+  color: #000000;
+  height: 30px;
+  width: 30%;
+  background-color: #eeeeee;
+  transition: opacity 0.4s ease-in-out;
+  z-index: 1000;
+}
+.Alert.show {
+  opacity: 1;
 }
 
 

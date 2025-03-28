@@ -49,12 +49,12 @@ cart.forEach((item) => {
                 <div className="ItemCartContainer">
                 {cart.map((item, index) => (
                         
-                         <InCartItem key={index} titulo={item.titulo} precio={item.price} resolution={item.resolution}> </InCartItem>
+                         <InCartItem   id={item.id} key={index} titulo={item.titulo} precio={item.price} resolution={item.resolution}> </InCartItem>
                         ))}
                 </div>
                 <div className="TotalPriceDiv">
                 <h3>Total</h3>
-                <h3>{total},00 $</h3>
+                <h3>${total},00</h3>
                 </div>
 
                 <div className="checkoutbuttondiv">

@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect,removeFromCart } from 'react';
 
 // Crear el contexto
 export const CartContext = createContext();
@@ -7,14 +7,39 @@ export const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
-  // Función para agregar elementos al carrito
-  const addToCart = (item) => {
-    setCart([...cart, item]);
+  // Cargar el carrito desde localStorage al inicio
+  useEffect(() => {
+    const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    setCart(savedCart);
+  }, []);
+
+  // Guardar el carrito en localStorage cada vez que cambie
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
+
+  const removeFromCart = (id) => {
+    setCart((prevCart) => {
+      const updatedCart = prevCart.filter(item => item.id !== id);
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+      return updatedCart;
+    });
   };
 
+  // Función para agregar elementos al carrito
+  const addToCart = (item) => {
+    const newItem = { ...item, id: Date.now() }; 
+    setCart((prevCart) => {
+      const updatedCart = [...prevCart, newItem];
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+      return updatedCart;
+    });
+  }
+
   return (
-    <CartContext.Provider value={{ addToCart, cart }}>
+    <CartContext.Provider value={{ addToCart, cart,removeFromCart }}>
       {children}
     </CartContext.Provider>
   );
 };
+
