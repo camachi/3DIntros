@@ -1,10 +1,12 @@
 import React from "react";
 import { CartContext } from "./CartContext";
-import { useContext } from "react";
+import { useContext,useState } from "react";
 import InCartItem from "./InCartItem";
+import Alert from "./Alert.jsx";
 
 function CartPage()
 {       const { cart } = useContext(CartContext);
+        const [mensaje, setMensaje] = useState({text: "" , id: 0}); 
 let total = 0;
 cart.forEach((item) => {
   total += Number(item.price) || 0; 
@@ -49,9 +51,10 @@ cart.forEach((item) => {
                 <div className="ItemCartContainer">
                 {cart.map((item, index) => (
                         
-                         <InCartItem   id={item.id} key={index} titulo={item.titulo} precio={item.price} resolution={item.resolution}> </InCartItem>
+                         <InCartItem setMensaje={setMensaje}  id={item.id} key={index} titulo={item.titulo} precio={item.price} resolution={item.resolution}> </InCartItem>
                         ))}
                 </div>
+                <Alert info={mensaje}></Alert>
                 <div className="TotalPriceDiv">
                 <h3>Total</h3>
                 <h3>${total},00</h3>
@@ -60,6 +63,7 @@ cart.forEach((item) => {
                 <div className="checkoutbuttondiv">
                 <button className="chekoutbutton">Check Out</button>
                 </div>
+                
         </div>
 
 

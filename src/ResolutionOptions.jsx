@@ -1,7 +1,7 @@
 import { useState} from "react";
 import { CartContext } from "./CartContext";
 import React, { useContext } from 'react';
-import Alert from "./Alert.jsx";
+import Alert from "./Alert";
 function ResolutionOptions( {price4k, price2k, titulo})
 {   const { addToCart } = useContext(CartContext);
     const [selectedPrice, setSelectedPrice] = useState({ resolution: "2k & 60fps", price: price2k });  
