@@ -56,6 +56,18 @@ nav ul li a {
   height: 30px;
   vertical-align: middle;
 }
+.cart-count
+{
+  position: absolute;
+  top: 30px;
+  right: 1px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
 
 
 Footer{
@@ -906,6 +918,20 @@ box-shadow: -1px 2px 63px -6px #00AAFF
 }
 .Alert.show {
   opacity: 1;
+}
+
+.CheckoutContainer
+{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 90vh;
+  background-color: rgb(26, 26, 26);
+  position: relative;
+  color: white;
+  box-shadow: 0 -5px 50px 5px rgba(161, 51, 255, 0.6);
 }
 
 

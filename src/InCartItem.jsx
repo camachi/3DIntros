@@ -45,7 +45,7 @@ function InCartItem({titulo, precio, resolution,id, setMensaje})
             </div>
 
             </div>
-
+            
             
             
             <div className="ItemButtonDiv"> 

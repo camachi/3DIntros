@@ -3,10 +3,12 @@ import { CartContext } from "./CartContext";
 import { useContext,useState } from "react";
 import InCartItem from "./InCartItem";
 import Alert from "./Alert.jsx";
+import { useNavigate } from "react-router-dom";
 
 function CartPage()
 {       const { cart } = useContext(CartContext);
         const [mensaje, setMensaje] = useState({text: "" , id: 0}); 
+        const navigate = useNavigate();
 let total = 0;
 cart.forEach((item) => {
   total += Number(item.price) || 0; 
@@ -61,7 +63,7 @@ cart.forEach((item) => {
                 </div>
 
                 <div className="checkoutbuttondiv">
-                <button className="chekoutbutton">Check Out</button>
+                <button onClick={() => {navigate("/CheckoutPage");}} className="chekoutbutton">Check Out</button>
                 </div>
                 
         </div>

@@ -2,9 +2,11 @@ import { useState} from "react";
 import { CartContext } from "./CartContext";
 import React, { useContext } from 'react';
 import Alert from "./Alert";
+import { useNavigate } from "react-router-dom";
 function ResolutionOptions( {price4k, price2k, titulo})
 {   const { addToCart } = useContext(CartContext);
     const [selectedPrice, setSelectedPrice] = useState({ resolution: "2k & 60fps", price: price2k });  
+    const navigate = useNavigate();
     const [mensaje, setMensaje] = useState({text: "" , id: 0});  
     return(
         <>
@@ -35,7 +37,7 @@ function ResolutionOptions( {price4k, price2k, titulo})
             <div className="ShopBuyButtonsContainer">
             <button onClick={() => {setMensaje({ text: "Item Added to cart!", id: Date.now() }); addToCart({ titulo, price: selectedPrice.price, resolution: selectedPrice.resolution })}} className="ShopBuyButtons" >Add to Cart</button>
             <Alert info={mensaje}></Alert>
-            <button className="ShopBuyButtons">Buy Now</button>
+             <button onClick={()=> {addToCart({titulo, price: selectedPrice.price, resolution: selectedPrice.resolution});  navigate("/cart");}} className="ShopBuyButtons">Buy Now</button> 
             </div>
             </>
     );
