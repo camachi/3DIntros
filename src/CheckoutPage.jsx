@@ -1,12 +1,12 @@
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import PayPalButton from "./PayPalButton";
-
+import { useNavigate } from "react-router-dom";
 function CheckoutPage() {
   const location = useLocation();
   const cartItems = location.state?.cartItems || [];
   const total = location.state?.total || 0;
-
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     products: [],
     names: [],
@@ -14,13 +14,13 @@ function CheckoutPage() {
     resolutions: [],
     materials: [],
     styles: [],
-    colors: [], // ✅ Agregado
+    colors: [], 
   });
 
   const [showPaypal, setShowPaypal] = useState(false);
   const [error, setError] = useState("");
 
-  // 🧠 Guardar el input dinámicamente
+  
   const handleInputChange = (field, index, value) => {
     setFormData((prev) => {
       const updated = [...(prev[field] || [])];
@@ -29,7 +29,7 @@ function CheckoutPage() {
     });
   };
 
-  // ✅ Verificar que todos los campos requeridos estén llenos
+  
   const handleConfirmInfo = () => {
     for (let i = 0; i < cartItems.length; i++) {
       const titulo = cartItems[i].titulo.toLowerCase();
@@ -56,8 +56,7 @@ function CheckoutPage() {
 
   return (
     <div className="CheckoutContainer">
-      <h1>Checkout</h1>
-      <p>Total: ${total},00</p>
+      
 
       {cartItems.map((item, index) => {
         const titulo = item.titulo.toLowerCase();
@@ -111,10 +110,15 @@ function CheckoutPage() {
         );
       })}
 
-      {/* 🔴 Mostrar error si algo falta */}
-      {error && <p style={{ color: "red" }}>{error}</p>}
+     
+     
 
       {/* ✅ Confirmar inputs antes del pago */}
+      <div className="TotalPriceDiv">
+      <h2>Checkout:</h2>
+      <h3>${total},00</h3>
+      </div>
+      {error && <p style={{ color: "red" }}>{error}</p>}
       <div className="botondepay">
         <button className="chekoutbutton" onClick={handleConfirmInfo}>
           Confirm Info
@@ -125,6 +129,7 @@ function CheckoutPage() {
       {showPaypal && (
       <div className="paypal-overlay">
       <div className="paypal-modal">
+      <div className="paypal-x"><a onClick={()=>navigate("/cart")}>X</a></div>
       <h3>Complete Your Payment</h3>
       <PayPalButton amount={total} products={cartItems} formData={formData} />
       </div>
