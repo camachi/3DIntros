@@ -933,7 +933,59 @@ box-shadow: -1px 2px 63px -6px #00AAFF
   color: white;
   box-shadow: 0 -5px 50px 5px rgba(161, 51, 255, 0.6);
 }
+.CheckoutItem
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid red;
+  height: auto;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.CheckoutContainer input
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  margin: 10px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-weight: bold;
 
+}
+
+.botondepay
+{
+  margin: 10px;
+}
+.paypal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px); /* Difumina el fondo */
+  background-color: rgba(0, 0, 0, 0.4); /* Capa oscura semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.paypal-modal {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  min-width: 300px;
+  max-width: 500px;
+  color: #000000;
+}
 
  @media (max-width: 1050px) {
   .ShopL {

@@ -10,6 +10,7 @@ import CartPage from './CartPage.jsx';
 import ShopBuyPage from './ShopBuyPage.jsx';
 import CheckoutPage from './CheckoutPage.jsx';
 import { CartProvider } from './CartContext';
+import Receipt from './receipt';
 
 
 createRoot(document.getElementById('root')).render(
@@ -23,6 +24,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/cart" element={<CartPage />} />
         <Route path="/ShopPageBuy/:id" element={<ShopBuyPage />} />
         <Route path="/CheckoutPage" element={<CheckoutPage />} />
+        <Route path="/receipt" element={<Receipt />} />
       </Routes>
     <Footer></Footer>
     </Router>

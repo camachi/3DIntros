@@ -25,6 +25,9 @@ export const CartProvider = ({ children }) => {
       return updatedCart;
     });
   };
+  const clearCart = () => {
+    setCart([]);
+  };
 
   // Función para agregar elementos al carrito
   const addToCart = (item) => {
@@ -37,7 +40,7 @@ export const CartProvider = ({ children }) => {
   }
 
   return (
-    <CartContext.Provider value={{ addToCart, cart,removeFromCart }}>
+    <CartContext.Provider value={{ addToCart, cart,removeFromCart,clearCart }}>
       {children}
     </CartContext.Provider>
   );

@@ -63,7 +63,7 @@ cart.forEach((item) => {
                 </div>
 
                 <div className="checkoutbuttondiv">
-                <button onClick={() => {navigate("/CheckoutPage");}} className="chekoutbutton">Check Out</button>
+                <button className="chekoutbutton" onClick={() => navigate("/CheckoutPage", { state: { cartItems: cart,total } })}>Check Out</button>
                 </div>
                 
         </div>
