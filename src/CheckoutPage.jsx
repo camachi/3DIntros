@@ -131,6 +131,7 @@ function CheckoutPage() {
       <div className="paypal-modal">
       <div className="paypal-x"><a onClick={()=>navigate("/cart")}>X</a></div>
       <h3>Complete Your Payment</h3>
+      <p>Test Account: intros3dtest@gmail.com - testtest</p>
       <PayPalButton amount={total} products={cartItems} formData={formData} />
       </div>
       </div>

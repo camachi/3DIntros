@@ -46,7 +46,13 @@ function PayPalButton({amount,products, formData}) {
             console.log("  Intro Materials:", formData.materials);
             console.log("  Intro Styles:", formData.styles);
           clearCart();
-          navigate("/receipt");
+          navigate("/receipt", {
+              state: {
+              productos: products,
+              data: formData
+            }
+          });
+
           });
           
         }

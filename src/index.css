@@ -1005,6 +1005,37 @@ box-shadow: -1px 2px 63px -6px #00AAFF
   color: #000000;
 }
 
+.receipt-div
+{
+  display: flex;
+  width: 100%;
+  min-height: 90vh;
+  background-color: rgb(26, 26, 26);
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.recibo
+{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed white;
+  width: 50%;
+  height: auto;
+
+}
+
+.recibo h1
+{
+  border-bottom: 2px solid #FF00FF;
+}
+
  @media (max-width: 1050px) {
   .ShopL {
     flex-direction: column;
