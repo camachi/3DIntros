@@ -1,8 +1,8 @@
 import IntroCard from "./IntroCard";
 import CardContent from "./CardContent";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import image1 from "./fotos/BG.png";
-import image2 from "./fotos/BG1.png";
+import image1 from "./fotos/BG.jpg";
+import image2 from "./fotos/BG1.jpg";
 import image3 from "./fotos/BG3.jpg";
 function ShopPage()
 {      const titulo1 = "Multistyle Intro🌝";
