@@ -7,12 +7,13 @@ function receipt()
     console.log(data);
     return(
         <div className="receipt-div">
-            <h1>Payment successfully Order details:</h1>
+            <div className="receipt-titulo"><h1>✅Payment successfully order details:</h1></div>
     {productos.map((datos,index) => {
     
     
         return (
                 <div className="recibo" key={index}>
+                <div className="recibo-order-num"><h4>Order: {index + 1}</h4></div>
                 <h1>{datos.titulo}</h1>
                 <h4>{datos.resolution}</h4>
                 {data.names?.[index] && <h2>Name: {data.names[index]}</h2>}

@@ -59,8 +59,8 @@ nav ul li a {
 .cart-count
 {
   position: absolute;
-  top: 30px;
-  right: 1px;
+  top: -2px;
+  right: 2px;
   background: red;
   color: white;
   font-size: 12px;
@@ -494,9 +494,8 @@ label{
   align-items: flex-start;
   
 }
-.bulletsdiv input{
-  margin-left: 10px;
-  margin-right: 10px;
+.bulletinfocontainer input{
+  transform: scale(1.5);
 }
 
 .desIntroOptions
@@ -504,6 +503,7 @@ label{
   display: flex;
   align-items: center;
   justify-content: center;
+  
   flex-direction: column;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   
@@ -522,6 +522,7 @@ label{
   list-style: disc;
   padding-left: 20px;
   margin: 10px;
+ 
 }
 
 li::marker
@@ -878,8 +879,8 @@ box-shadow: -1px 2px 63px -6px #00AAFF
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  border-top: 1px dashed white;
+  border-bottom: 1px dashed white;
   height: 100px;
   width: 99%;
   margin-top: 10px;
@@ -941,7 +942,7 @@ box-shadow: -1px 2px 63px -6px #00AAFF
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 1px solid red;
+  border: px solid red;
   height: auto;
   width: 100%;
   margin-top: 10px;
@@ -1016,6 +1017,9 @@ box-shadow: -1px 2px 63px -6px #00AAFF
   align-items: center;
   justify-content: flex-start;
   text-align: center;
+  position: relative;
+ 
+  box-shadow: 0 -5px 50px 5px rgba(161, 51, 255, 0.6);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .recibo
@@ -1028,14 +1032,55 @@ box-shadow: -1px 2px 63px -6px #00AAFF
   border: 1px dashed white;
   width: 50%;
   height: auto;
+  margin: 15px;
 
 }
 
 .recibo h1
 {
   border-bottom: 2px solid #FF00FF;
+  
+}
+.recibo-order-num
+{
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: flex-start;
+  
+}
+.recibo-order-num h4{
+  padding: 5px;
+  margin: 0;
 }
 
+.titulo-info-intro
+{ display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.receipt-titulo{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  margin: 10px;
+}
+.checkoutpage-titulo
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  
+}
+.checkoutpage-titulo h1{
+  border-bottom: 2px solid #FF00FF;
+}
  @media (max-width: 1050px) {
   .ShopL {
     flex-direction: column;
@@ -1059,6 +1104,10 @@ box-shadow: -1px 2px 63px -6px #00AAFF
   }
 
 
+}
+.cart-icon-wrapper {
+  position: relative;
+  display: inline-block;
 }
 
 
@@ -1124,7 +1173,11 @@ box-shadow: -1px 2px 63px -6px #00AAFF
 }
 
 @media (max-width: 800px)
-{   
+{  
+  .recibo
+  {
+    width: 90%;
+  }  
   .ItemDivCartContainer
   {
     flex-direction: column;
@@ -1152,7 +1205,21 @@ box-shadow: -1px 2px 63px -6px #00AAFF
 }
 
 @media (max-width: 500px)
-{
+{   nav h1
+    {
+      display: none;
+      visibility: hidden;
+    }
+    nav
+    {
+      justify-content: center;
+    }
+  
+  
+  .receipt-div
+  {
+    font-size: 13px;
+  }
   .IntroCard
   {
     width: 95%;

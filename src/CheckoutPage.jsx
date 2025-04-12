@@ -57,7 +57,7 @@ function CheckoutPage() {
   return (
     <div className="CheckoutContainer">
       
-
+    <div className="checkoutpage-titulo"><h1>Provide Your Details 📄</h1></div>
       {cartItems.map((item, index) => {
         const titulo = item.titulo.toLowerCase();
 

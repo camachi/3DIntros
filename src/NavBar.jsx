@@ -13,7 +13,9 @@ const Navbar = () => {
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/shop">Shop</Link></li>
+        <div className="cart-icon-wrapper">
         <li><Link to="/cart"><img className='cartLogo' src={carrito}></img>{cart.length > 0 && (<span className="cart-count">{cart.length}</span>)}</Link></li>
+        </div>
       </ul> 
     </nav>
   );
