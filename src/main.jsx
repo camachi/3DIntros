@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css'
 import Navbar from './NavBar.jsx'
 import Footer from './Footer.jsx'
@@ -19,7 +19,7 @@ createRoot(document.getElementById('root')).render(
     <Router>
     <Navbar></Navbar>
     <Routes>
-        <Route path="/3DIntros" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/ShopPageBuy/:id" element={<ShopBuyPage />} />
