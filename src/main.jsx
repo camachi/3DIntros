@@ -19,7 +19,7 @@ createRoot(document.getElementById('root')).render(
     <Router>
     <Navbar></Navbar>
     <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/3DIntros" element={<HomePage />} />
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/ShopPageBuy/:id" element={<ShopBuyPage />} />
