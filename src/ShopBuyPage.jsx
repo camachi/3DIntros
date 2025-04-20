@@ -4,8 +4,6 @@ import VideoCard from "./VideoCard";
 import ResolutionOptions from "./ResolutionOptions";
 import IntroOptions from "./IntroOptions";
 import ShopDetails from "./ShopDetails";
-import emailIcon from "./fotos/email.png";
-import discordIcon from "./fotos/discord.png";
 import { CartContext } from "./CartContext";
 function ShopBuyPage()
 {   const { id } = useParams();

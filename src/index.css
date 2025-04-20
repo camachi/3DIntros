@@ -97,8 +97,7 @@ Footer h4{
 
 .Home{
   position: relative;
-  background-image: url('fotos/BG1.jpg');
-  background-color: #ffffff;
+  background-image: url('fotos/bg44.jpg');
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;
@@ -107,11 +106,10 @@ Footer h4{
   align-items: center;
   height: 90vh;
   width: 100%;
-  box-shadow: 
-    inset 0 0 20px rgba(0, 0, 0, 0.4), 
-    inset 0 0 40px rgba(0, 0, 0, 0.6);
-    color: white;
-    box-shadow: 0 -5px 50px 5px rgba(161, 51, 255, 0.6);
+  color: white;
+  
+  box-shadow: 0 -5px 50px 5px rgba(161, 51, 255, 0.6);
+  
 }
 
 .logohome{
@@ -126,8 +124,7 @@ Footer h4{
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(0px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -905,7 +902,7 @@ box-shadow: -1px 2px 63px -6px #00AAFF
   transform: translateX(-50%);
   padding: 10px 20px;
   border-radius: 5px;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -915,10 +912,11 @@ box-shadow: -1px 2px 63px -6px #00AAFF
   height: 30px;
   width: 30%;
   background-color: #eeeeee;
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
   z-index: 1000;
 }
 .Alert.show {
+  display: flex;
   opacity: 1;
 }
 
